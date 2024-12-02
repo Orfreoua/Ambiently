@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BKAllocatedSize</key>
+	<integer>856064</integer>
+	<key>BKDisplayName</key>
+	<string>Saint-Exupery-Le_Petit_Prince</string>
+	<key>BKGenerationCount</key>
+	<integer>2</integer>
+	<key>BKInsertionDate</key>
+	<integer>754872465</integer>
+	<key>artistName</key>
+	<string>Antoine de Saint-Exupéry</string>
+	<key>book-info</key>
+	<dict>
+		<key>cover-image-hash</key>
+		<string>15FB7C85C56D175C577AAC9CF7AA7FDB</string>
+		<key>cover-image-path</key>
+		<string>Ops/images/cover.jpg</string>
+		<key>mime-type</key>
+		<string>application/epub+zip</string>
+		<key>package-file-hash</key>
+		<string>1679D3D383E673059C854297E4D38623</string>
+		<key>publisher-unique-id</key>
+		<string>awp2011-04-16T14:40:57Z</string>
+		<key>unique-id</key>
+		<integer>-4508029932594801262</integer>
+		<key>update-level</key>
+		<integer>2</integer>
+	</dict>
+	<key>bookDescription</key>
+	<string>(1943)</string>
+	<key>genre</key>
+	<string>Nouvelles - Contes Jeunesse</string>
+	<key>isPreview</key>
+	<false/>
+	<key>itemName</key>
+	<string>LE PETIT PRINCE</string>
+	<key>updateDate</key>
+	<date>2024-12-02T22:47:45Z</date>
+</dict>
+</plist>

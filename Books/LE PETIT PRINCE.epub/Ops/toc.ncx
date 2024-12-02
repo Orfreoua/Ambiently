@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" xml:lang="fr" version="2005-1">
+<head>
+<meta name="dtb:uid" content="awp2011-04-16T14:40:57Z"/>
+<meta name="dtb:depth" content="1"/>
+<meta name="dtb:totalPageCount" content="0"/>
+<meta name="dtb:maxPageNumber" content="0"/>
+</head>
+<docTitle>
+<text>LE PETIT PRINCE</text>
+</docTitle>
+<navMap>
+<navPoint id="navpoint-1" playOrder="1">
+<navLabel>
+<text>Page titre</text>
+</navLabel>
+<content src="001.html"/>
+</navPoint>
+<navPoint id="navpoint-2" playOrder="2">
+<navLabel>
+<text>PREMIER CHAPITRE</text>
+</navLabel>
+<content src="004.html"/>
+</navPoint>
+<navPoint id="navpoint-3" playOrder="3">
+<navLabel>
+<text>CHAPITRE II</text>
+</navLabel>
+<content src="005.html"/>
+</navPoint>
+<navPoint id="navpoint-4" playOrder="4">
+<navLabel>
+<text>CHAPITRE III</text>
+</navLabel>
+<content src="006.html"/>
+</navPoint>
+<navPoint id="navpoint-5" playOrder="5">
+<navLabel>
+<text>CHAPITRE IV</text>
+</navLabel>
+<content src="008.html"/>
+</navPoint>
+<navPoint id="navpoint-6" playOrder="6">
+<navLabel>
+<text>CHAPITRE V</text>
+</navLabel>
+<content src="009.html"/>
+</navPoint>
+<navPoint id="navpoint-7" playOrder="7">
+<navLabel>
+<text>CHAPITRE VI</text>
+</navLabel>
+<content src="011.html"/>
+</navPoint>
+<navPoint id="navpoint-8" playOrder="8">
+<navLabel>
+<text>CHAPITRE VII</text>
+</navLabel>
+<content src="012.html"/>
+</navPoint>
+<navPoint id="navpoint-9" playOrder="9">
+<navLabel>
+<text>CHAPITRE VIII</text>
+</navLabel>
+<content src="013.html"/>
+</navPoint>
+<navPoint id="navpoint-10" playOrder="10">
+<navLabel>
+<text>CHAPITRE IX</text>
+</navLabel>
+<content src="014.html"/>
+</navPoint>
+<navPoint id="navpoint-11" playOrder="11">
+<navLabel>
+<text>CHAPITRE X</text>
+</navLabel>
+<content src="018.html"/>
+</navPoint>
+<navPoint id="navpoint-12" playOrder="12">
+<navLabel>
+<text>CHAPITRE XI</text>
+</navLabel>
+<content src="021.html"/>
+</navPoint>
+<navPoint id="navpoint-13" playOrder="13">
+<navLabel>
+<text>CHAPITRE XII</text>
+</navLabel>
+<content src="022.html"/>
+</navPoint>
+<navPoint id="navpoint-14" playOrder="14">
+<navLabel>
+<text>CHAPITRE XIII</text>
+</navLabel>
+<content src="023.html"/>
+</navPoint>
+<navPoint id="navpoint-15" playOrder="15">
+<navLabel>
+<text>CHAPITRE XIV</text>
+</navLabel>
+<content src="024.html"/>
+</navPoint>
+<navPoint id="navpoint-16" playOrder="16">
+<navLabel>
+<text>CHAPITRE XV</text>
+</navLabel>
+<content src="027.html"/>
+</navPoint>
+<navPoint id="navpoint-17" playOrder="17">
+<navLabel>
+<text>CHAPITRE XVI</text>
+</navLabel>
+<content src="028.html"/>
+</navPoint>
+<navPoint id="navpoint-18" playOrder="18">
+<navLabel>
+<text>CHAPITRE XVII</text>
+</navLabel>
+<content src="029.html"/>
+</navPoint>
+<navPoint id="navpoint-19" playOrder="19">
+<navLabel>
+<text>CHAPITRE XVIII</text>
+</navLabel>
+<content src="030.html"/>
+</navPoint>
+<navPoint id="navpoint-20" playOrder="20">
+<navLabel>
+<text>CHAPITRE XIX</text>
+</navLabel>
+<content src="031.html"/>
+</navPoint>
+<navPoint id="navpoint-21" playOrder="21">
+<navLabel>
+<text>CHAPITRE XX</text>
+</navLabel>
+<content src="034.html"/>
+</navPoint>
+<navPoint id="navpoint-22" playOrder="22">
+<navLabel>
+<text>CHAPITRE XXI</text>
+</navLabel>
+<content src="035.html"/>
+</navPoint>
+<navPoint id="navpoint-23" playOrder="23">
+<navLabel>
+<text>CHAPITRE XXII</text>
+</navLabel>
+<content src="036.html"/>
+</navPoint>
+<navPoint id="navpoint-24" playOrder="24">
+<navLabel>
+<text>CHAPITRE XXIII</text>
+</navLabel>
+<content src="037.html"/>
+</navPoint>
+<navPoint id="navpoint-25" playOrder="25">
+<navLabel>
+<text>CHAPITRE XXIV</text>
+</navLabel>
+<content src="038.html"/>
+</navPoint>
+<navPoint id="navpoint-26" playOrder="26">
+<navLabel>
+<text>CHAPITRE XXV</text>
+</navLabel>
+<content src="039.html"/>
+</navPoint>
+<navPoint id="navpoint-27" playOrder="27">
+<navLabel>
+<text>CHAPITRE XXVI</text>
+</navLabel>
+<content src="042.html"/>
+</navPoint>
+<navPoint id="navpoint-28" playOrder="28">
+<navLabel>
+<text>CHAPITRE XXVII</text>
+</navLabel>
+<content src="043.html"/>
+</navPoint>
+<navPoint id="navpoint-29" playOrder="29">
+<navLabel>
+<text>À propos de cette édition électronique</text>
+</navLabel>
+<content src="044.html"/>
+</navPoint>
+</navMap>
+</ncx>
