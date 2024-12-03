@@ -2,53 +2,42 @@
 
 import openai
 import os
-from extract_text import extract_text_from_epub  # Importer la fonction depuis le fichier extract_text.py
+from extract_text import extract_text_from_epub
 
-# Charger la clé API OpenAI à partir d'une variable d'environnement
+# Load OpenAI API key from environment variable
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def generate_music_context(book_text):
-    """
-    Fonction pour générer un contexte musical basé sur le texte du livre.
-    Elle doit fournir un résumé concis du contexte, par exemple, des mots-clés liés à l'ambiance ou à la scène.
-
-    Parameters:
-    - book_text: Texte extrait du livre EPUB
-
-    Returns:
-    - str: Contexte musical généré, limité à 199 caractères
-    """
-    # Utiliser GPT pour analyser le texte et extraire un contexte musical
+    # Use GPT to analyze the text and extract a musical context
     response = openai.ChatCompletion.create(
         model="gpt-4",
         messages=[
-            {"role": "system", "content": "Tu es un assistant qui génère des résumés de contexte pour une IA de musique."},
-            {"role": "user", "content": f"Voici un extrait de livre : '{book_text[:20000]}'\nPeux-tu générer un contexte musical qui correspond à l'ambiance du texte ? Cela doit être une description succincte et précise, comme 'nature', 'calme', 'tristesse', etc. 10 mots serai vraiment le strict minimum"}
+            {"role": "system", "content": "You are an assistant generating context summaries for a music AI."},
+            {"role": "user", "content": f"Here is a book excerpt: '{book_text[:20000]}'\nCan you generate a musical context that matches the mood of the text? Keep it concise and precise, like 'nature', 'calm', 'sadness', etc. 7 words is really the strict minimum."}
         ]
     )
 
-    # Récupérer la réponse et la formater pour le contexte musical
     music_context = response['choices'][0]['message']['content']
-    
-    # Limiter la taille du contexte à 199 caractères
+
     music_context = music_context[:199]
     
     return music_context
 
-# Exemple d'utilisation
+'''
+# Example usage
 if __name__ == "__main__":
-    # Définir le chemin du fichier EPUB
+
     epub_file = '../Books/LE PETIT PRINCE.epub'
-    
-    # Extraire le texte du fichier EPUB
+
+    # Extract text from the EPUB file
     book_text = extract_text_from_epub(epub_file)
     
-    # Générer un contexte musical basé sur le texte extrait
+    # Generate a musical context based on the extracted text
     music_context = generate_music_context(book_text)
 
-    print(music_context)  # Cela affiche uniquement le contexte, sans texte du livre
+    print(music_context)  # This only displays the context, without the book text
     
-    # Optionnel : sauvegarder le contexte dans un fichier
+    # Optional: save the context to a file
     with open('music_context.txt', 'w', encoding='utf-8') as f:
         f.write(music_context)
-
+'''
