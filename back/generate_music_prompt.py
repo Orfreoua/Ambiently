@@ -8,22 +8,41 @@ from extract_text import extract_text_from_epub
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def generate_music_context(book_text):
-    # Use GPT to analyze the text and extract a musical context
+    # Format the prompt to ask for emotional and musical context at different parts of the text
+    prompt = f"""
+    You are an assistant specializing in analyzing emotions and narrative moods in a text. I will provide you with an excerpt. Your task is to:
+
+    1. Identify the dominant emotions or moods at the beginning, middle, and end of the text.
+    2. Briefly describe how these emotions evolve.
+    3. Provide a concise and evocative description of the musical atmospheres corresponding to these emotions. Limit yourself to 7 words maximum per musical atmosphere.
+
+    Excerpt: "{book_text[:2000]}"  # Take the first 2000 characters of the excerpt
+
+    Respond in the following format: 
+    - Beginning: [dominant emotion], [musical atmosphere]
+    - Middle: [dominant emotion], [musical atmosphere]
+    - End: [dominant emotion], [musical atmosphere]
+
+    If important transitions or nuances appear, add them briefly.
+    """
+
+    # Call OpenAI API to generate a response
     response = openai.ChatCompletion.create(
         model="gpt-4",
         messages=[
-            {"role": "system", "content": "You are an assistant generating context summaries for a music AI."},
-            {"role": "user", "content": f"Here is a book excerpt: '{book_text[:20000]}'\nCan you generate a musical context that matches the mood of the text? Keep it concise and precise, like 'nature', 'calm', 'sadness', etc. 7 words is really the strict minimum."}
+            {"role": "system", "content": "You are an assistant helping to analyze texts and generate musical contexts."},
+            {"role": "user", "content": prompt}
         ]
     )
 
+    # Extract the music context from the response
     music_context = response['choices'][0]['message']['content']
 
-    music_context = music_context[:199]
+    # Ensure the context is concise and doesn't exceed 200 characters
+    music_context = music_context[:200]
     
     return music_context
 
-'''
 # Example usage
 if __name__ == "__main__":
 
@@ -40,4 +59,4 @@ if __name__ == "__main__":
     # Optional: save the context to a file
     with open('music_context.txt', 'w', encoding='utf-8') as f:
         f.write(music_context)
-'''
+
