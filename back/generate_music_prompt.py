@@ -43,7 +43,6 @@ def generate_music_context(book_text):
     
     return music_context
 
-'''
 # Example usage
 if __name__ == "__main__":
 
@@ -60,4 +59,3 @@ if __name__ == "__main__":
     # Optional: save the context to a file
     with open('music_context.txt', 'w', encoding='utf-8') as f:
         f.write(music_context)
-'''
