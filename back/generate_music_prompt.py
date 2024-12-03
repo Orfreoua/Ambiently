@@ -23,7 +23,7 @@ def generate_music_context(book_text):
         model="gpt-4",
         messages=[
             {"role": "system", "content": "Tu es un assistant qui génère des résumés de contexte pour une IA de musique."},
-            {"role": "user", "content": f"Voici un extrait de livre : '{book_text[:20000]}'\nPeux-tu générer un contexte musical qui correspond à l'ambiance du texte ? Cela doit être une description succincte et précise, comme 'nature', 'calme', 'tristesse', etc."}
+            {"role": "user", "content": f"Voici un extrait de livre : '{book_text[:20000]}'\nPeux-tu générer un contexte musical qui correspond à l'ambiance du texte ? Cela doit être une description succincte et précise, comme 'nature', 'calme', 'tristesse', etc. 10 mots serai vraiment le strict minimum"}
         ]
     )
 
@@ -45,8 +45,7 @@ if __name__ == "__main__":
     
     # Générer un contexte musical basé sur le texte extrait
     music_context = generate_music_context(book_text)
-    
-    # Afficher uniquement le contexte généré sans autres informations
+
     print(music_context)  # Cela affiche uniquement le contexte, sans texte du livre
     
     # Optionnel : sauvegarder le contexte dans un fichier
