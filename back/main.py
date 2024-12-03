@@ -1,18 +1,18 @@
+# main.py
 from flask import Flask, jsonify, request, send_from_directory
-from epub2txt import epub2txt
-import os
 from flask_cors import CORS
+import os
+from epub_handler import process_epub  # Importer la fonction de gestion des EPUB
 
 app = Flask(__name__)
 
 # Configure the directory where files will be stored
-UPLOAD_FOLDER = os.path.join('back', 'uploads')  # Update folder path
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)  # Ensure the folder exists
+UPLOAD_FOLDER = os.path.join('back', 'uploads')
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Enable CORS for cross-origin requests
 CORS(app, resources={r"/*": {"origins": "*"}})
-
 
 @app.route('/upload', methods=['POST'])
 def upload():
@@ -34,25 +34,29 @@ def upload():
 
     return jsonify({"data": {"message": "File uploaded successfully", "url": public_url}}), 200
 
-
 @app.route('/back/uploads/<filename>', methods=['GET'])
 def serve_file(filename):
     """
     Serve files from the 'back/uploads' directory.
     """
-    return send_from_directory('uploads/', filename)
-
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 @app.route('/run', methods=['POST'])
 def run():
     """
-    Example pipeline logic for processing an EPUB file.
+    Process the uploaded EPUB file, extract text, and generate a music context.
     """
     data = request.get_json()
     epub_file_path = data['epub_file_path']
-    chapter_list = epub2txt(epub_file_path, outputlist=True)
-    print(chapter_list[1])
+    
+    # Process the EPUB file and generate music context
+    music_context, error = process_epub(epub_file_path)
+    
+    if error:
+        return jsonify({"error": error}), 404
 
+    # Return the music context response
+    return jsonify({"data": {"message": "EPUB processed successfully", "music_context": music_context}}), 200
 
 if __name__ == '__main__':
     app.run(debug=True, port=3000)
