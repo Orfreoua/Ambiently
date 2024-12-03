@@ -38,11 +38,12 @@ def generate_music_context(book_text):
     # Extract the music context from the response
     music_context = response['choices'][0]['message']['content']
 
-    # Ensure the context is concise and doesn't exceed 200 characters
-    music_context = music_context[:200]
+    # Ensure the context is concise and doesn't exceed 178 characters, adding "without abrupt shifts" at the beginning with a newline
+    music_context = f"without abrupt shifts\n{music_context[:178]}"
     
     return music_context
 
+'''
 # Example usage
 if __name__ == "__main__":
 
@@ -59,4 +60,4 @@ if __name__ == "__main__":
     # Optional: save the context to a file
     with open('music_context.txt', 'w', encoding='utf-8') as f:
         f.write(music_context)
-
+'''
