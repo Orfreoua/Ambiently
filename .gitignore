@@ -1,3 +1,4 @@
 ambiently/
 # Don't push secret file
 .env
+back/__pycache__

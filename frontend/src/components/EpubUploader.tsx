@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DropZone from "./DropZone";
 
 interface FilePreview {
+  file: File;
   name: string;
   size: number;
 }
@@ -15,6 +16,7 @@ const EpubUploader: React.FC = () => {
     if (acceptedFiles.length > 0) {
       const newFile = acceptedFiles[0];
       setFile({
+        file: newFile, // Store the actual File object for upload
         name: newFile.name,
         size: newFile.size,
       });
@@ -26,28 +28,37 @@ const EpubUploader: React.FC = () => {
   };
 
   const uploadFile = async () => {
-    if (!file) return;
+    console.log("Upload file");
+    if (!file || !file.file) return; // Ensure a valid file is available
 
     setIsUploading(true);
     setUploadStatus(null);
 
     const formData = new FormData();
-    formData.append("file", file as unknown as File);
+    formData.append("file", file.file); // Use the actual File object
+
+    console.log("FormData:");
+    for (const [key, value] of formData.entries()) {
+      console.log(`${key}:`, value);
+    }
 
     try {
-      const response = await fetch("https://votre-api-backend.com/upload", {
+      const response = await fetch("http://127.0.0.1:3000/upload", {
         method: "POST",
         body: formData,
       });
 
       if (response.ok) {
         setUploadStatus("Fichier envoyé avec succès !");
-        setFile(null);
+        setFile(null); // Clear the file on success
+        const data = await response.json();
+        localStorage.setItem("uploadedFileUrl", data.data.url);
+        window.location.href = "/reader";
       } else {
         setUploadStatus("Erreur lors de l'envoi du fichier.");
       }
     } catch (error) {
-      console.log(error);
+      console.error("Error during file upload:", error);
       setUploadStatus("Erreur de connexion au serveur.");
     } finally {
       setIsUploading(false);

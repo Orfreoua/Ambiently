@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ReactReader } from "react-reader";
 
 const EpubReader: React.FC = () => {
   const [location, setLocation] = useState<string | number>(0);
   const [currentPage, setCurrentPage] = useState(0);
+  const [fileUrl, setFileUrl] = useState<string | null>(null);
   //   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleLocationChanged = (epubcfi: string) => {
@@ -18,15 +19,26 @@ const EpubReader: React.FC = () => {
       }
     }
   };
+
+  useEffect(() => {
+    const url = localStorage.getItem("uploadedFileUrl");
+    if (url) {
+      setFileUrl(url);
+    }
+  }, []);
+
   return (
-    <div style={{ height: "100vh" }}>
-      <ReactReader
-        url="/prince.epub"
-        location={location}
-        locationChanged={handleLocationChanged}
-      />
-      <audio autoPlay src="/music.wav" loop />
-    </div>
+    <>
+      <button onClick={() => window.location.href = '/'}>Back to Homepage</button>
+      <div style={{ height: "100vh" }}>
+        <ReactReader
+          url={fileUrl}
+          location={location}
+          locationChanged={handleLocationChanged}
+        />
+        <audio autoPlay src="/music.wav" loop />
+      </div>
+    </>
   );
 };
 
