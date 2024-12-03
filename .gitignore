@@ -1,1 +1,3 @@
 ambiently/
+# Don't push secret file
+.env
