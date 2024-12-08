@@ -8,7 +8,7 @@ You can view the full PDF presentation [here](./assets/Ambiently%20-%20API%20Day
 
 Watch the demo!:
 
-[![Watch the Demo](https://drive.google.com/file/d/1K3fpnSRfMoQxhkOP9laE62HFSzfiExyn/view?usp=sharing)
+[![Watch the Demo](https://drive.google.com/file/d/1K3fpnSRfMoQxhkOP9laE62HFSzfiExyn/view)
 
 ---
 
