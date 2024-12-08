@@ -6,9 +6,9 @@ Welcome to the **Ambiently** project repository, presented during the API Days e
 
 You can view the full PDF presentation [here](./assets/Ambiently%20-%20API%20Days.pdf).
 
-If you prefer, watch the presentation video below:
+Watch the demo!:
 
-[![Watch the Presentation](https://via.placeholder.com/800x450.png?text=Click+to+Play+Video)](./assets/Ambiently%20-%20API%20Days.mp4)
+[![Watch the Demo](https://drive.google.com/file/d/1K3fpnSRfMoQxhkOP9laE62HFSzfiExyn/view?usp=sharing)
 
 ---
 
