@@ -1,22 +1,20 @@
 # Ambiently - API Days
 
-Bienvenue sur le dépôt du projet **Ambiently** présenté lors des API Days.
+Welcome to the **Ambiently** project repository, presented during the API Days event.
 
-## Aperçu de la présentation
+## Presentation Overview
 
-Vous pouvez consulter le PDF complet [ici](./Ambiently%20-%20API%20Days.pdf).
+You can view the full PDF presentation [here](./assets/Ambiently%20-%20API%20Days.pdf).
 
-### Pages
+If you prefer, watch the presentation video below:
 
-![Page 1](./images/page1.png)
-![Page 2](./images/page2.png)
-![Page 3](./images/page3.png)
-<!-- Répétez pour toutes les pages -->
+[![Watch the Presentation](https://via.placeholder.com/800x450.png?text=Click+to+Play+Video)](./assets/Ambiently%20-%20API%20Days.mp4)
 
 ---
 
 ## Description
 
-Cette présentation couvre les fonctionnalités d'Ambiently, une API qui synchronise l'ambiance musicale avec votre lecture.
+This presentation highlights the features of Ambiently, an API that synchronizes the musical ambiance with your reading experience.
 
 ---
+
