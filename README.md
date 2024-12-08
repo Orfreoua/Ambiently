@@ -4,7 +4,7 @@ Bienvenue sur le dépôt du projet **Ambiently** présenté lors des API Days.
 
 ## Aperçu de la présentation
 
-Vous pouvez consulter le PDF complet [ici](./Ambiently - API Days.pdf).
+Vous pouvez consulter le PDF complet [ici](./Ambiently%20-%20API%20Days.pdf).
 
 ### Pages
 
